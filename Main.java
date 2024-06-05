@@ -1,5 +1,10 @@
+import compensation.CompensationClaim;
+import compensation.CompensationClaimListImpl;
+import compensation.Survey;
 import complaint.Complaint;
 import complaint.ComplaintListImpl;
+import contract.Contract;
+import contract.ContractListImpl;
 import customer.Customer;
 import customer.CustomerList;
 import customer.CustomerListImpl;
@@ -10,21 +15,13 @@ import customer.personalHistory.PersonalHistoryImpl;
 import employee.Employee;
 import employee.EmployeeListImpl;
 import employee.sellingRecord.SellingRecord;
-import insurance.Insurance;
+import insurance.*;
 import insurance.InsuranceApplication.InsuranceApplication;
 import insurance.InsuranceApplication.InsuranceApplicationListImpl;
-import insurance.InsuranceListImpl;
-import compensation.CompensationClaim;
-import compensation.CompensationClaimListImpl;
-import compensation.Survey;
-import contract.Contract;
-import contract.ContractListImpl;
-import insurance.*;
 import partner.Partner;
 import partner.PartnerListImpl;
 import partner.rate.Rate;
 import payment.Payment;
-import payment.PaymentListImpl;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -42,13 +39,11 @@ public class Main {
     private static int insuranceApplicationIndex = 1;
 
     private static InsuranceApplicationListImpl insuranceApplicationList; // 보험 가입 신청 내역을 저장하는 리스트
-    private static InsuranceApplication insuranceApplication;
 
     private static ContractListImpl contractList;
     private static PartnerListImpl partnerList;
     private static CompensationClaimListImpl compensationClaimList;
     private static InsuranceListImpl insuranceList;
-    private static PaymentListImpl paymentList;
     private static CustomerList customerList;
     private static ComplaintListImpl complaintList;
     private static EmployeeListImpl employeeList;

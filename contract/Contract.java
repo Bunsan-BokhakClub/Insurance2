@@ -12,26 +12,27 @@ import java.util.ArrayList;
 
 public class Contract {
 
+// 중복된 명사 지우기
 
 	private String customerID;
-	private String customerName;
-	private String gender;
-	private String birth;
-	private String phoneNumber;
-	private String address;
+//	private String customerName;
+//	private String gender;
+//	private String birth;
+//	private String phoneNumber;
+//	private String address;
 	private String insuranceID;
-	private String insuranceName;
-	private int paymentAmount;
-	private int compensationAmount;
-	private String cycleType;
-	private String paymentCycle;
-	private String insurancePeriod; //보험 기간.
-	private boolean contractStatus;
-	private boolean isPayment;
+//	private String insuranceName;
+//	private int paymentAmount;
+//	private int compensationAmount;
+//	private String cycleType;
+//	private String paymentCycle;
+//	private String insurancePeriod; //보험 기간.
+//	private boolean contractStatus;
+//	private boolean isPayment;
 	private String contractID;
-	private int age;
+//	private int age;
 	private String concludeDate;
-	private String email;
+//	private String email;
 	private String endDate;
 	private PaymentListImpl paymentList;
 	public CompensationClaimListImpl compensationClaimList;
@@ -89,14 +90,14 @@ public class Contract {
 	}
 
 
-	public String addYearsToDate() {
+	private String addYearsToDate() {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 		LocalDateTime dateTime = LocalDateTime.parse(this.concludeDate, formatter);
 		LocalDateTime newDateTime = dateTime.plusYears(Integer.parseInt(this.insurancePeriod));
 		return newDateTime.format(formatter);
 	}
 
-	public double carculateCancelMoney(){
+	private double carculateCancelMoney(){
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 		LocalDateTime now = LocalDateTime.now();
 		LocalDateTime endDateTime = LocalDateTime.parse(this.endDate, formatter);
